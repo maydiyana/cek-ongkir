@@ -13,10 +13,7 @@ use App\Http\Controllers\OngkirController;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
-
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [OngkirController::class, 'index']);
 
 Route::get('/ongkir', [OngkirController::class, 'index']);
 Route::post('/ongkir', [OngkirController::class, 'cekOngkir']);
